@@ -1,0 +1,77 @@
+
+h1 {
+  color: #c82747;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 12px;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+
+}
+
+input[type=checkbox] {
+  &.small {
+
+    width: 15px;
+    margin: 10px;
+    height: 15px;
+  }
+
+  &.medium {
+    width: 20px;
+    height: 20px;
+  }
+
+  &.large {
+    width: 25px;
+    height: 25px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+label {
+  margin-left: 10px;
+  margin-top: 6px;
+}
+
+s {
+  margin-left: 10px;
+  margin-top: 6px;
+}
+
+.container:hover ~ .checkMark {
+  background-color: #b32323;
+}
+
+
+input[type=checkbox]:checked {
+  color: #c82747;
+}
+
+.roundEffect {
+
+
+  &:hover {
+    width: 35px;
+    height: 35px;
+    border-radius: 25px;
+    opacity: 70%;
+    background-color: #87acf1;
+  }
+
+  &:active {
+    border: 1.5px solid #01010e;
+  }
+
+}
