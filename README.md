@@ -6,6 +6,7 @@ or
 download code repo
 
 npm i
+
 npm run start
 
 Please provide your feedbacks and inputs :) 
