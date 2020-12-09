@@ -20,6 +20,8 @@ function Footer(props) {
                 setStyle("search");
                 props.action("search")
                 break;
+            default:
+                break;
         }
 
     }

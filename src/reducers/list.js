@@ -27,6 +27,8 @@ function List(state = {todos: [],filter : 'all', search : ''}, action) {
         case 'search_string':{
             return {...state, search : action.payload};
         }
+        default:
+            return state;
     }
 }
 

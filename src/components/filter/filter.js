@@ -5,11 +5,10 @@ import {connect} from 'react-redux';
 import {useState} from 'react';
 
 const mapStateToProps = state => ({
-    todos: state && state.todos || []
+    todos: (state && state.todos) || []
 })
 
 function Filter(props) {
-    console.log(props)
     let [active, setActive] = useState("all")
     function onClick(items){
         store.dispatch(displayItems(items))

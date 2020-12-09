@@ -16,12 +16,14 @@ function List(props) {
         case 'active':
             items = props.todos.filter(item=> !item.checked);
             break;
+        default:
+            break;
     }
     if(props.search)
         items = items.filter(item => item.value.startsWith(props.search));
     return items ? <ul className="ulClass">
         {items.map((todo, i) => {
-            return (<div><CheckBox size="small" key={i} checked={todo.checked}>{todo.value}</CheckBox>
+            return (<div key={i}><CheckBox size="small" checked={todo.checked}>{todo.value}</CheckBox>
                 <hr/>
             </div>)
         })

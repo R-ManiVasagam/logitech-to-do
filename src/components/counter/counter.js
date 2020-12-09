@@ -1,7 +1,7 @@
 import {connect} from "react-redux";
 
 const mapStateToProps = state => ({
-    todos: state && state.todos || []
+    todos: (state && state.todos) || []
 })
 
 function Counter(props) {
