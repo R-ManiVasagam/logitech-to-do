@@ -10,15 +10,15 @@ function CheckBox(props) {
     function handleChange(e) {
         let flag = e.target.checked;
         if (flag)
-            store.dispatch(markItem(child))
+            store.dispatch(markItem(props.id))
         else
-            store.dispatch(unmarkItem(child))
+            store.dispatch(unmarkItem(props.id))
     }
 
     return (<div className="container">
         <span className={disabled?"":"roundEffect"}>
         <input className={sizeClass} type="checkbox" disabled={disabled} checked={disabled||props.checked} onChange={handleChange}/></span>
-        {!props.checked ? <label key={props.key}>{child}</label> : <s><label key={props.key}>{child}</label></s>}
+        {!props.checked ? <label key={props.id}>{child}</label> : <s><label key={props.id}>{child}</label></s>}
         <span className="checkMark"></span>
     </div>)
 }
